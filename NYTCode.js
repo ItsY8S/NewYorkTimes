@@ -1,47 +1,38 @@
-// SETUP VARIABLES
-// ==========================================================
-
-// This variable will be pre-programmed with our authentication key (the one we received when we registered)
-var authKey = '667c11f5b3ba4e6cabb53f8ceab9e20d'
+// API key
+const authKey = '667c11f5b3ba4e6cabb53f8ceab9e20d'
 
 // These variables will hold the results we get from the user's inputs via HTML
-var queryTerm = ''
-var numResults = 0
-var startYear = 0
-var endYear = 0
+const queryTerm = ''
+const numResults = 0
+const startYear = 0
+const endYear = 0
 
 // Based on the queryTerm we will create a queryURL
-var queryURLBase =
+const queryURLBase =
   'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=' +
   authKey +
   '&q='
 
 // Array to hold the various article info
-var articleCounter = 0
-
-// FUNCTIONS
-// ==========================================================
+let articleCounter = 0
 
 // This runQuery function expects two parameters (the number of articles to show and the final URL to download data from)
 function runQuery(numArticles, queryURL) {
   // The AJAX function uses the URL and Gets the JSON data associated with it. The data then gets stored in the variable called: "NYTData"
   $.ajax({ url: queryURL, method: 'GET' }).done(function(NYTData) {
     // Here we are logging the URL so we have access to it for troubleshooting
-    console.log('------------------------------------')
     console.log('URL: ' + queryURL)
-    console.log('------------------------------------')
 
     // Here we then log the NYTData to console, where it will show up as an object.
     console.log(NYTData)
-    console.log('------------------------------------')
 
     // Loop through and provide the correct number of articles
-    for (var i = 0; i < numArticles; i++) {
+    for (let i = 0; i < numArticles; i++) {
       // Add to the Article Counter (to make sure we show the right number)
       articleCounter++
 
       // Create the HTML Well (Section) and Add the Article content for each
-      var wellSection = $('<div>')
+      let wellSection = $('<div>')
       wellSection.addClass('well')
       wellSection.attr('id', 'articleWell-' + articleCounter)
       $('#wellSection').append(wellSection)
@@ -90,15 +81,13 @@ function runQuery(numArticles, queryURL) {
       )
 
       // Log the remaining fields to console as well
+      console.log(NYTData.response.docs[i])
       console.log(NYTData.response.docs[i].pub_date)
       console.log(NYTData.response.docs[i].section_name)
       console.log(NYTData.response.docs[i].web_url)
     }
   })
 }
-
-// METHODS
-// ==========================================================
 
 // On Click button associated with the Search Button
 $('#runSearch').on('click', function() {
@@ -109,7 +98,7 @@ $('#runSearch').on('click', function() {
   $('#wellSection').empty()
 
   // Search Term
-  var searchTerm = $('#searchTerm')
+  let searchTerm = $('#searchTerm')
     .val()
     .trim()
   queryURL = queryURLBase + searchTerm
