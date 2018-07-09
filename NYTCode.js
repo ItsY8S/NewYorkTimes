@@ -66,9 +66,14 @@ function runQuery(numArticles, queryURL) {
       }
 
       // Then display the remaining fields in the HTML (Section Name, Date, URL)
-      $('#articleWell-' + articleCounter).append(
-        '<h5>Section: ' + NYTData.response.docs[i].section_name + '</h5>'
-      )
+      if (NYTData.response.docs[i].section_name == undefined) {
+        $('#articleWell-' + articleCounter).append('<h5>Section: N/A</h5>')
+      } else {
+        $('#articleWell-' + articleCounter).append(
+          '<h5>Section: ' + NYTData.response.docs[i].section_name + '</h5>'
+        )
+      }
+
       $('#articleWell-' + articleCounter).append(
         '<h5>' + NYTData.response.docs[i].pub_date + '</h5>'
       )
