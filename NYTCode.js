@@ -8,7 +8,9 @@ const queryURLBase =
 function runQuery(queryURL) {
   $.ajax({ url: queryURL, method: 'GET' }).done(function(NYTData) {
     console.log('URL: ' + queryURL)
-    console.log(NYTData)
+    console.log(NYTData.response.docs[0].headline.main)
+    let title = NYTData.response.docs[0].headline.main
+    document.querySelector('#title').innerHTML = title
   })
 }
 
