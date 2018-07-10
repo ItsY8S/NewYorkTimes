@@ -11,3 +11,5 @@ function runQuery(queryURL) {
     console.log(NYTData)
   })
 }
+
+runQuery(queryURLBase)
