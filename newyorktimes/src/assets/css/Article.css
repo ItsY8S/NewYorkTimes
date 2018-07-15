@@ -1,0 +1,50 @@
+.Article {
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 32px;
+  color: #212121;
+}
+
+.author {
+  margin-top: 5px;
+  margin-bottom: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #767676;
+}
+
+.heading {
+  margin: 0;
+  font-size: 20px;
+}
+
+p {
+  margin-top: 5px;
+  text-indent: 0;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 450px) {
+  .Article {
+    padding: 5px 25px;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 600px) {
+  .Article {
+    padding: 5px 25px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .Article {
+    padding: 15px 50px;
+  }
+}
