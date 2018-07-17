@@ -4,6 +4,7 @@
   padding: 50px 100px;
   border-radius: 10px;
   background-color: white;
+  position: relative;
 }
 
 .title {
@@ -29,6 +30,34 @@
 p {
   margin-top: 5px;
   text-indent: 0;
+}
+
+.Article img {
+  width: 100%;
+  height: auto;
+}
+
+div#arrows {
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  border-radius: 50%;
+}
+
+.leftArrow {
+  left: -25px;
+}
+
+div#arrows button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  background: #f0f0f0;
+  border: 1px dotted;
+  outline: none;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 450px) {

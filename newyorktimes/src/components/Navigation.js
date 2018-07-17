@@ -7,12 +7,14 @@ class Navigation extends React.Component {
   render() {
     return (
       <nav className="Navigation container">
-        <img className="nav-icon" src={Logo} alt="Newspaper Icon" />
+        <a href="/">
+          <img className="nav-icon" src={Logo} alt="Newspaper Icon" />
+        </a>
 
-        <div id="searchBar">
-          <input id="search" type="text" />
-          <button>Search</button>
-        </div>
+        <form id="searchBar" onSubmit={this.props.getArticles}>
+          <input id="search" type="text" onChange={this.props.query} />
+          <button id="searchBtn">Search</button>
+        </form>
 
         <img className="nav-icon" src={ShareIcon} alt="Share Icon" />
       </nav>
