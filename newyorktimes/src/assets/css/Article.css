@@ -1,9 +1,11 @@
 .Article {
-  width: 100%;
+  width: 50%;
   height: auto;
   padding: 50px 100px;
+  margin: 50px auto;
   border-radius: 10px;
   background-color: white;
+  border: 5px solid black;
   position: relative;
 }
 
@@ -44,8 +46,40 @@ div#arrows {
   border-radius: 50%;
 }
 
+.leftArrow,
+.rightArrow {
+  width: 50px !important;
+  height: 50px !important;
+  top: -25px;
+  position: absolute;
+  cursor: pointer;
+}
+
 .leftArrow {
   left: -25px;
+}
+
+.rightArrow {
+  right: -25px;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  transform: scale(1.25);
+}
+
+.type {
+  text-align: center;
+  font-size: 32px;
+  margin: 0px;
+  border: 3px solid #000;
+}
+
+.goLeft {
+  height: 50px !important;
+  width: 50px !important;
+  position: absolute;
+  top: -25px;
 }
 
 div#arrows button {
@@ -55,25 +89,38 @@ div#arrows button {
   position: absolute;
   right: -25px;
   top: -25px;
-  background: #f0f0f0;
-  border: 1px dotted;
+  background: white;
+  border: 2.5px solid black;
   outline: none;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 450px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   .Article {
     padding: 5px 25px;
+    width: 95%;
   }
-}
 
-@media only screen and (min-width: 451px) and (max-width: 600px) {
-  .Article {
-    padding: 5px 25px;
+  .leftArrow,
+  .rightArrow {
+    transform: scale(0.75);
+  }
+
+  .leftArrow:hover,
+  .rightArrow:hover {
+    transform: scale(0.9);
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   .Article {
     padding: 15px 50px;
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .Article {
+    padding: 15px 50px;
+    width: 75%;
   }
 }
