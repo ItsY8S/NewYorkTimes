@@ -2,6 +2,7 @@
   "name": "newyorktimes",
   "version": "0.1.0",
   "private": true,
+    "homepage" : "https://itsy8s.github.io/NewYorkTimes/",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
