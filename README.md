@@ -20,7 +20,7 @@ but I wasn't really in love with. Running out of time, I settled on a news API.
 Little did I know, the API didn't come with a body section. I panicked and
 tried four more APIs until I found something that suited my project.
 My next step after testing the API was to start designing. I used Adobe XD and
-started throwing some shapes up on the screen. I just knew I wanted something simplisic.
+started throwing some shapes up on the screen. I just knew I wanted something simplistic.
 Like every other design, I hated the first few attempts. Eventually, I decided to go
 with a border-heavy look. I moved around the navigation and the contents until I went
 with a pretty basic bar. After finishing up, I jumped into a file and started laying
@@ -30,7 +30,7 @@ made use of components and made use of my API. When I said I finally found a goo
 I mean I found one with an article body. The response I got back literally contained
 HTML. I thought it was going to be a huge mess and take a lot of work, but luckily
 I found something called 'dangerouslySetInnerHTML'. I wasn't really concerned how
-dangerous it was becuase it just worked. The only tweak I made was to the img tag.
+dangerous it was because it just worked. The only tweak I made was to the img tag.
 After receiving feedback, I continued making changes to my application until my deadline.
 
 ___
